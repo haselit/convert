@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+     <!--  b icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220511/pngtree-blue-futuristic-microchip-background-vector-information-digital-transformation-image_1302018.jpg');">
+    <div class="container pt-5 mt-5">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card pt-5 p-5">
+                    <div class="card-title">
+                        <h2 style="text-align: center;color: blue;">Paint Measurement conversion</h2>
+                    </div>
+                    <div class="card-body">
+                       
+                        <form>
+                            <table class="table">
+                                <tr>
+                                    <td>Length</td>
+                                    <td>
+                                        <input type="number" id="l1" name="v" placeholder="in feet" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" id="l2" name="v"placeholder="in inch "  class="form-control">
+                                    </td>                               
+                                        
+                                  
+                                  
+                                </tr>
+                                <tr>
+                                    <td>Breadth  </td>
+                                    <td>
+                                        <input type="number" id="b1" name="v" placeholder="in feet" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" id="b2" name="v"placeholder="in inch "  class="form-control">
+                                    </td>                               
+                                        
+                                  
+                                  
+                                </tr>
+                                <br><br>
+                                <tr>
+                                    <td>
+                                    <input class="btn btn-outline-primary " type="button" value="Convert" onclick="cal()">
+                                </td>
+                                </tr>
+                            </table>
+                           
+                            <table id="res" class="table table-striped" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;display: none;">
+                                <tr>
+                                    <th></th>
+                                    <th>Measurement in meter</th>
+                                    
+
+                                </tr>
+                                <tr>
+                                    <th>Length</th>
+                                    <td id="ll1"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <th>Breadth</th>
+                                    <td id="bb1"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <th>Area</th>
+                                    <td id="aa1"></td>
+                                    
+                                </tr>
+                            </table>
+                        </form>
+                        <br><br>
+
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card pt-5 p-5">
+                    <div class="card-title">
+                        <h2 style="text-align: center;color: blue;">Brick Measurement conversion</h2>
+                    </div>
+                    <div class="card-body">
+                       
+                        <form>
+                            <table class="table">
+                                <tr>
+                                    <td>Length  </td>
+                                    <td>
+                                        <input type="number" id="le1" name="v" placeholder="in feet" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" id="le2" name="v"placeholder="in inch "  class="form-control">
+                                    </td>                               
+                                        
+                                  
+                                  
+                                </tr>
+                                <tr>
+                                    <td>Breadth </td>
+                                    <td>
+                                        <input type="number" id="be1" name="v" placeholder="in feet" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" id="be2" name="v"placeholder="in inch "  class="form-control">
+                                    </td>                                                                
+                                  
+                                </tr>
+                                <tr>
+                                    <td>Height </td>
+                                    <td>
+                                        <input type="number" id="he1" name="v" placeholder="in feet" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" id="he2" name="v"placeholder="in inch "  class="form-control">
+                                    </td>                                                                
+                                  
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <input class="btn btn-outline-primary " type="button" value="Convert" onclick="call()">
+                                </td>
+                                </tr>
+                            </table>
+                           
+                            <table id="ress" class="table table-striped" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;display: none;">
+                                <tr>
+                                    <th></th>
+                                    <th>Measurement in meter</th>
+                                    
+
+                                </tr>
+                                <tr>
+                                    <th>Length</th>
+                                    <td id="lll1"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <th>Breadth</th>
+                                    <td id="bbb1"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <th>Heigth</th>
+                                    <td id="hhh1"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <th>Area</th>
+                                    <td id="aaa1"></td>
+                                    
+                                </tr>
+                            </table>
+                        </form>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="card pt-5 p-5">
+            <div class="card-title">
+                <h2 style="text-align: center;color: blue;">Measurement conversion</h2>
+            </div>
+            <div class="card-body">
+                <h1>Paint Work</h1>
+                <form>
+                    <table class="table">
+                        <tr>
+                            <td>Enter measured value</td>
+                            <td>
+                                <input type="number" id="v" name="v" class="form-control">
+                            </td>
+                           
+                                
+                          
+                          
+                        </tr>
+                    </table>
+                    <div style="align-content: center;">
+                        <button class="btn btn-outline-primary " style="align-items: cen;">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div> -->
+    </div>
+
+
+
+    <script>
+        function cal(){
+            var l1=document.getElementById("l1").value;
+            var l2=document.getElementById("l2").value;
+            var b1=document.getElementById("b1").value;
+            var b2=document.getElementById("b2").value;
+
+            l2=(l2/12);
+            b2=(b2/12);
+            var l=(l1+l2)*0.304;
+            var b=(b1+b2)*0.304;
+
+            l=l/10;
+            b=b/10;
+            document.getElementById("ll1").innerHTML=Math.round((l) * 100) / 100+" m";
+;
+            //document.getElementById("ll2")=(l1+l2);
+            document.getElementById("bb1").innerHTML=Math.round((b) * 100) / 100+" m";
+           // document.getElementById("ll1")=(l1+l2);
+            document.getElementById("aa1").innerHTML=Math.round((l*b) * 100) / 100+" m2";
+           // document.getElementById("ll1")=(l1+l2);
+
+           // document.getElementById("res").style.display="inline";
+            document.getElementById("res").style.display="inline";
+
+        }
+        function call(){
+            let l1=document.getElementById("le1").value;
+            let l2=document.getElementById("le2").value;
+            let b1=document.getElementById("be1").value;
+            let b2=document.getElementById("be2").value;
+            let h1=document.getElementById("he1").value;
+            let h2=document.getElementById("he2").value;
+
+            l2=(l2/12);
+            b2=(b2/12);
+            h2=(h2/12);
+            let l=(l1+l2)*(0.304);
+            let b=(b1+b2)*0.304;
+            let h=(h1+h2)*0.304;
+            l=l/10;
+            b=b/10;
+            h=h/10;
+            
+            document.getElementById("lll1").innerHTML=Math.round((l) * 100) / 100+" m";
+
+           
+            document.getElementById("bbb1").innerHTML=Math.round((b) * 100) / 100+" m";
+
+            document.getElementById("hhh1").innerHTML=Math.round((h) * 100) / 100+" m";
+           
+            document.getElementById("aaa1").innerHTML=Math.round((l*b*h) * 100) / 100+" m3";
+           
+            document.getElementById("ress").style.display="inline";
+
+        }
+    </script>
+</body>
+</html>
